@@ -1,0 +1,260 @@
+.brands {
+    &__list {
+        & {
+            margin-bottom: 40px;
+        }
+        &__item {
+            & {
+                margin-bottom: 20px;
+            }
+            a {
+                & {
+                    .borderRadius(2px);
+                    border: 1px solid #ededed;
+                    padding: 5px;
+                    display: block;
+                }
+                &:hover,
+                &:focus {
+                    & {
+                        border-color: @yellow;
+                        text-decoration: none;
+                    }
+                    .brands {
+                        &__list {
+                            &__title {
+                                color: @yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__title {
+            .fontSecondBold(16px, 22px);
+            color: @default;
+            margin: 10px 0px 5px;
+            height: 22px;
+            overflow: hidden;
+            text-align: center;
+        }
+        &__img {
+            & {
+                height: 80px;
+                position: relative;
+            }
+            img {
+                .absoluteCentered();
+                max-width: 85%;
+                max-height: 85%;
+            }
+        }
+    }
+}
+.brand {
+    &__title {
+        .fontSecondBold(27px, 40px);
+        color: #000;
+        margin: 0px 0px 25px;
+    }
+    &__info {
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ededed;
+        overflow: hidden;
+    }
+    &__img {
+        & {
+            max-width: 180px;
+            max-height: 100px;
+            float: left;
+            margin-top: 5px;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &__desc {
+        .fontBaseReg(14px, 20px);
+        display: table;
+        padding-left: 20px;
+        max-width: 520px;
+    }
+    &__categories {
+        & {
+            margin-bottom: 40px;
+        }
+        .list--arrow {
+            & {
+                overflow: hidden;
+            }
+            li {
+                position: relative;
+                margin-right: 4%;
+                overflow: hidden;
+            }
+            a {
+                font-size: 14px;
+                white-space: nowrap;
+            }
+            .ico {
+                position: absolute;
+                margin: 0px;
+                top: 8px;
+                left: 0px;
+            }
+        }
+    }
+    &__filter {
+        .filter {
+            &__box {
+                &--price,
+                &--brands,
+                &--availability {
+                    display: none;
+                }
+                &--sort {
+                    width: auto;
+                    float: left;
+                }
+                &--view {
+                    width: auto;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+/* MEDIA QUERY */
+@media (min-width: @screen-md) {
+    .brand {
+        &__listing {
+            .products {
+                &__item {
+                    width: 33.3%;
+                }
+                &--row {
+                    .products {
+                        &__item {
+                            width: 100%;
+                        }
+                        &__info {
+                            width: 45%;
+                            padding-right: 2%;
+                        }
+                        &__quantity {
+                            width: 50%;
+                        }
+                        &__buy {
+                            & {
+                                height: 36px;
+                                width: 50%;
+                            }
+                            .ico {
+                                right: 0px;
+                                left: 0px;
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+                        &__footer {
+                            left: 60%;
+                        }
+                    }
+                }
+                &--code {
+                    .products {
+                        &__item {
+                            width: 100%;
+                        }
+                        &__code {
+                            width: 20%;
+                            font-size: 16px;
+                        }
+                        &__info {
+                            width: 38%;
+                            padding-right: 0%;
+                        }
+                        &__name {
+                            font-size: 14px;
+                        }
+                        &__content {
+                            width: 24%;
+                        }
+                        &__price {
+                            &--actual {
+                                font-size: 18px;
+                            }
+                            &__dph {
+                                font-size: 12px;
+                            }
+                            &__your {
+                                font-size: 12px;
+                            }
+                        }
+                        &__footer {
+                            left: 82%;
+                            width: 15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: @screen-md-max) {
+    .brand {
+        &__filter {
+            .filter {
+                &__box {
+                    &--view {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 719px) {
+    .brands {
+        &__list {
+            &__item {
+                width: 33.3%;
+            }
+        }
+    }
+    .brand {
+        &__img {
+            max-width: 120px;
+        }
+    }
+}
+@media (max-width: @screen-cxs-max) {
+    .brands {
+        &__list {
+            &__item {
+                width: 50%;
+            }
+        }
+    }
+    .brand {
+        &__img {
+            max-width: 80px;
+        }
+        &__filter {
+            .filter {
+                &__box {
+                    &--view {
+                        float: left;
+                        clear: both;
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+}

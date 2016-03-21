@@ -1,0 +1,19 @@
+.ico {
+    & {
+        .inlineBlock();
+    }
+    &__hover {
+        .hover {
+            display: none;
+        }
+        &:hover,
+        &:focus {
+            .orig {
+                display: none;
+            }
+            .hover {
+                .inlineBlock();
+            }
+        }
+    }
+}

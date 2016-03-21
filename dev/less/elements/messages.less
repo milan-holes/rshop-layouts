@@ -1,0 +1,62 @@
+.msg {
+    & {
+        .borderRadius(2px);
+        .fontBaseMedium(17px, 23px);
+        border: 1px solid @grayLight;
+        background: #fff;
+        padding: 15px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    &--validate {
+        display: none;
+    }
+    &--smaller {
+        font-size: 15px;
+        line-height: 22px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    &--bigger {
+        font-size: 20px;
+        line-height: 26px;
+        padding: 25px;
+    }
+    &--warning {
+        background-color: @warningBg;
+        border-color: @warningBorder;
+        color: @warningColor;
+    }
+    &--danger {
+        background-color: @dangerBg;
+        border-color: @dangerBorder;
+        color: @dangerColor;
+    }
+    &--info {
+        background-color: @infoBg;
+        border-color: @infoBorder;
+        color: @infoColor;
+    }
+    &--success {
+        background-color: @successBg;
+        border-color: @successBorder;
+        color: @successColor;
+    }
+}
+
+label {
+    &.error {
+        .msg;
+        & {
+            .fontBaseReg(12px, 16px);
+            padding: 5px 8px;
+            text-transform: none;
+            margin: 8px 0px 0px;
+            background-color: @dangerBg;
+            border-color: @dangerBorder;
+            color: @dangerColor;
+            font-weight: normal;
+            width: 100%;
+        }
+    }
+}

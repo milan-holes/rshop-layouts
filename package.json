@@ -1,0 +1,15 @@
+{
+  "name": "RSHOP",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-less": "~0.6.4",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-spritesmith": "^6.1.0"
+  }
+}

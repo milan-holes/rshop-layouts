@@ -1,0 +1,245 @@
+.bx {
+    .bx-wrapper {
+        position: relative;
+    }
+    .bx-controls {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        text-align: center;
+    }
+    .bx-pager {
+        .inlineBlock();
+    }
+    .bx-pager-link {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .bx-pager-item {
+        .inlineBlock();
+        margin: 0px 5px;
+    }
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    &--index {
+        & {
+            margin-bottom: 15px;
+        }
+        .bx-pager {
+            .borderRadius(2px, 0px);
+            background-color: #fff;
+            padding: 10px 8px;
+        }
+        .bx-pager-item {
+            width: 14px;
+            height: 14px;
+        }
+        .bx-pager-link {
+            & {
+                .borderRadius(7px);
+                position: relative;
+                background-color: #d3d2d2;
+            }
+            &:after {
+                .absoluteCentered();
+                .borderRadius(4px);
+                content: "";
+                display: block;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color: #d3d2d2;
+            }
+            &.active {
+                & {
+                    background-color: #070135;
+                }
+                &:after {
+                    background-color: #f6e407;
+                }
+            }
+            &:hover,
+            &:focus {
+                background-color: #070135;
+            }
+        }
+    }
+    &--article {
+        .bx-controls {
+            position: static;
+            float: left;
+            margin-top: 12px;
+        }
+        .bx-pager-item {
+            & {
+                width: 12px;
+                height: 12px;
+            }
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+        .bx-pager-link {
+            & {
+                .borderRadius(6px);
+                position: relative;
+                background-color: #211f20;
+            }
+            &:after {
+                .absoluteCentered();
+                .borderRadius(50%);
+                content: "";
+                display: block;
+                position: absolute;
+                background-color: #fff;
+                width: 6px;
+                height: 6px;
+            }
+            &.active {
+                &:after {
+                    background-color: @yellow;
+                }
+                &:hover,
+                &:focus {
+                    &:after {
+                        background-color: @yellow;
+                    }
+                }
+            }
+            &:hover,
+            &:focus {
+                &:after {
+                    background-color: #d3d2d2;
+                }
+            }
+        }
+    }
+    &--contact {
+        .bx-controls {
+            text-align: left;
+        }
+        .bx-pager {
+            .borderRadius(2px, 0px);
+            padding: 15px;
+        }
+        .bx-pager-item {
+            width: 18px;
+            height: 18px;
+        }
+        .bx-pager-link {
+            & {
+                .borderRadius(9px);
+                position: relative;
+                background-color: #fff;
+            }
+            &:after {
+                .absoluteCentered();
+                .borderRadius(5px);
+                content: "";
+                display: block;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+            }
+            &.active {
+                & {
+                    background-color: #fff;
+                }
+                &:after {
+                    background-color: #f6e407;
+                }
+            }
+            &:hover,
+            &:focus {
+                background-color: #070135;
+            }
+        }
+    }
+    &--advantages {
+        .bx-controls {
+            bottom: -30px;
+        }
+        .bx-pager {
+            .borderRadius(2px, 0px);
+        }
+        .bx-pager-item {
+            width: 12px;
+            height: 12px;
+        }
+        .bx-pager-link {
+            & {
+                .borderRadius(6px);
+                position: relative;
+                background-color: #f7f6fa;
+            }
+            &:after {
+                .absoluteCentered();
+                .borderRadius(4px);
+                content: "";
+                display: block;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color: #000;
+            }
+            &.active {
+                & {
+                    background-color: #454545;
+                }
+                &:after {
+                    background-color: #ffa650;
+                }
+            }
+            &:hover,
+            &:focus {
+                &:after {
+                    background-color: #ffa650;
+                }
+            }
+        }
+    }
+}
+
+.ui-slider {
+    & {
+        .borderRadius(3px);
+        background: #fff;
+        height: 5px;
+    }
+    .ui-slider-range {
+        background: @yellow;
+    }
+    .ui-slider-handle {
+        & {
+            .borderRadius(9px);
+            .inlineBlock();
+            width: 18px;
+            height: 18px;
+            background: @yellow;
+            position: relative;
+            top: -6px;
+            cursor: pointer;
+            margin-left: -12px;
+            outline: none;
+        }
+        &:after {
+            content: "";
+            .absoluteCentered();
+            .borderRadius(4px);
+            width: 8px;
+            height: 8px;
+            background: #211f20;
+        }
+    }
+}

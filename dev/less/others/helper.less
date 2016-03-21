@@ -1,0 +1,70 @@
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.static {
+    position: static;
+}
+
+.t_left {
+    text-align: left;
+}
+.t_right {
+    text-align: right;
+}
+.t_center {
+    text-align: center;
+}
+
+.breaker {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+    height: 0px;
+    line-height: 0px;
+    *line-height: 0px;
+    overflow: hidden
+}
+
+.nodisplay {
+    display: none;
+}
+.nomargin {
+    margin: 0px;
+}
+.nopadding {
+    padding: 0px;
+}
+.nopadding-l {
+    padding-left: 0px;
+}
+.nopadding-r {
+    padding-right: 0px;
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+.valign {
+    .valign();
+}
+
+.flex {
+    & {
+        .display(flex);
+    }
+    @media (max-width: @screen-xs-max) {
+        display: block;
+    }
+}

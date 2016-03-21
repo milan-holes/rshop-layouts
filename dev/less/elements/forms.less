@@ -1,0 +1,144 @@
+.form-group {
+    & > label {
+        display: none;
+    }
+    &.inside {
+        & {
+            position: relative;
+        }
+        .btn {
+            .absoluteCentered();
+            left: auto;
+            right: 5px;
+        }
+    }
+    &.with_label {
+        & > label {
+            .inlineBlock();
+        }
+    }
+    &.is_checkbox {
+        .form-control {
+            margin: 12px 0px;
+            float: left;
+            height: 14px;
+            width: auto;
+        }
+        & > label {
+            .fontBaseReg(14px, 36px);
+            color: #fff;
+            float: left;
+            font-weight: normal;
+            padding-left: 10px;
+            margin-bottom: 0px;
+        }
+    }
+    &.is_radio {
+        & {
+            overflow: hidden;
+            position: relative;
+        }
+        .form-control {
+            margin: 3px 0px;
+            height: 14px;
+            width: auto;
+            position: absolute;
+        }
+        & > label {
+            .fontBaseReg(14px, 18px);
+            color: #000;
+            font-weight: normal;
+            padding-left: 25px;
+            margin-bottom: 0px;
+        }
+    }
+    textarea {
+        height: 105px;
+        background: @grayLight;
+        padding: 12px;
+    }
+}
+.form-control {
+    & {
+        .borderRadius(2px);
+        .boxSizing(border-box);
+        color: #211f20;
+    }
+    &.error {
+        border-color: #d43f3a;
+    }
+}
+.bootstrap-select {
+    & {
+        .borderRadius(2px);
+        max-width: 100%;
+        height: 38px;
+        border: 1px solid #ededed;
+    }
+    & > .dropdown-toggle {
+        & {
+            .fontBaseLight();
+            height: 100%;
+            padding-left: 12px;
+            background: @grayLight;
+        }
+        .bs-caret {
+            & {
+                display: block;
+                width: 43px;
+                background: #fff;
+                position: absolute;
+                top: 1px;
+                bottom: 1px;
+                right: 1px;
+                border-left: 1px solid #ededed;
+            }
+            .caret {
+                .absoluteCentered();
+            }
+        }
+    }
+    &.sp {
+        &--transparent {
+            & {
+                border: none;
+            }
+            & > .dropdown-toggle {
+                & {
+                    .fontBaseBold();
+                    background: #fff;
+                }
+                .bs-caret {
+                    & {
+                        display: inline;
+                        width: auto;
+                        background: transparent;
+                        height: auto;
+                        position: static;
+                        top: auto;
+                        right: auto;
+                        border-left: none;
+                    }
+                    .caret {
+                        right: 12px;
+                        left: auto;
+                    }
+                }
+            }
+        }
+        &--white {
+            & > .dropdown-toggle {
+                & {
+                    .fontBaseReg();
+                    background: #fff;
+                    color: #000;
+                }
+                .bs-caret {
+                    & {
+                        width: 33px;
+                    }
+                }
+            }
+        }
+    }
+}

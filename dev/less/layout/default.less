@@ -1,0 +1,77 @@
+body {
+    & {
+        .fontBaseLight(14px, 18px);
+        color: @default;
+        min-width: 320px;
+    }
+    &.body--overlay {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+strong {
+    .fontBaseBold();
+    font-weight: normal;
+}
+h1 {
+    .fontSecondBold(28px, 32px);
+    color: #000;
+    margin-top: 10px;
+}
+h2 {
+    .fontSecondBold(28px, 32px);
+    margin-bottom: 35px;
+}
+.wrapper {
+    & {
+        .transition(transform .3s ease-in-out);
+        .transform(translate(0px, 0px));
+    }
+    &.sidelined {
+        .transition(transform .3s ease-in-out);
+        .transform(translate(-320px, 0px));
+    }
+    &--cart {
+        .transform(none);
+    }
+}
+.content {
+    min-height: 500px;
+    overflow: hidden;
+}
+.overlay {
+    & {
+        .absoluteCentered();
+        position: fixed;
+        background: rgba(255, 255, 255, .95);
+        z-index: 2000;
+        display: none;
+    }
+}
+
+/* MEDIA QUERY */
+@media (min-width: @screen-sm) {
+    .container {
+        width: @container-sm;
+    }
+}
+@media (min-width: @screen-md) {
+    .container {
+        width: @container-md;
+    }
+}
+@media (min-width: @screen-lg) {
+    .container {
+        width: @container-lg;
+    }
+}
+@media (min-width: @screen-xs) {
+    .visible-cxs {
+        display: none!important;
+    }
+}
+@media (max-width: @screen-cxs-max) {
+    .hidden-cxs {
+        display: none!important;
+    }
+}
