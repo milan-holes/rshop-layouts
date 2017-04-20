@@ -1,6 +1,47 @@
 <?php
-function __($string) {
-    return $string;
+/*
+ *
+ * CONFIGURATIONS
+ *
+ */
+$pages = [
+    'index' => [
+        'template' => 'Pages/index',
+        'layout' => 'default'
+    ],
+    'listing' => [
+        'template' => 'Catalog/listing',
+        'layout' => 'default'
+    ],
+    'product' => [
+        'template' => 'product',
+        'layout' => 'default'
+    ]
+];
+
+/*
+ *
+ * FUNCTIONS
+ *
+ */
+function __($string, $args = null)
+{
+    if (!$string) {
+        return null;
+    }
+
+    $arguments = func_num_args() === 2 ? (array)$args : array_slice(func_get_args(), 1);
+
+    $replace = [];
+    foreach ($arguments as $token => $value) {
+        // convert an array to a CSV string
+        if (is_array($value)) {
+            $value = '"' . implode('", "', $value) . '"';
+        }
+        $replace['{' . $token . '}'] = $value;
+    }
+
+    return strtr($string, $replace);
 }
 
 $navig = array(

@@ -4,15 +4,15 @@ module.exports = function(grunt) {
 
         watch: {
             less: {
-                files: 'dev/less/*/*.less',
+                files: 'resources/less/*/*.less',
                 tasks: ['css']
             },
             js: {
-                files: 'dev/js/*.js',
+                files: 'resources/js/*.js',
                 tasks: ['uglify']
             },
             img: {
-                files: 'dev/img/*/*',
+                files: 'resources/img/*/*',
                 tasks: ['img']
             }
         },
@@ -20,12 +20,12 @@ module.exports = function(grunt) {
         less: {
             compile: {
                 files: {
-                    'dev/less/import.css' : 'dev/less/import.less'
+                    'resources/less/import.css' : 'resources/less/import.less'
                 }
             },
             bootstrap: {
                 files: {
-                    'dev/css/bootstrap.css' : 'dev/css/bootstrap/bootstrap.less'
+                    'resources/css/bootstrap.css' : 'resources/css/bootstrap/bootstrap.less'
                 }
             }
         },
@@ -33,14 +33,14 @@ module.exports = function(grunt) {
         concat_css: {
           all: {
             src: [
-              'dev/css/reset.css',
-              'dev/css/bootstrap.css',
-              'dev/css/lib/bootstrap-select.min.css',
-              'dev/css/lib/bootstrap-notify.css',
-              'dev/css/jquery/jquery-ui.css',
-              'dev/css/jquery/jquery.fancybox.css',
-              'dev/css/sprite_all.css',
-              'dev/less/import.css'
+              'resources/css/reset.css',
+              'resources/css/bootstrap.css',
+              'resources/css/lib/bootstrap-select.min.css',
+              'resources/css/lib/bootstrap-notify.css',
+              'resources/css/jquery/jquery-ui.css',
+              'resources/css/jquery/jquery.fancybox.css',
+              'resources/css/sprite_all.css',
+              'resources/less/import.css'
             ],
             dest: 'dev/css/styles.css'
           },
@@ -48,11 +48,11 @@ module.exports = function(grunt) {
 
         sprite:{
           all: {
-            src: ['dev/img/*/*.png', '!dev/img/bg/*', '!dev/img/logos/*'],
-            retinaSrcFilter: ['dev/img/*/*@2x.png', '!dev/img/bg/*', '!dev/img/logos/*'],
+            src: ['resources/img/*/*.png', '!resources/img/bg/*', '!resources/img/logos/*'],
+            retinaSrcFilter: ['resources/img/*/*@2x.png', '!resources/img/bg/*', '!resources/img/logos/*'],
             dest: 'webroot/img/sprite_all.png',
             retinaDest: 'webroot/img/sprite_all@2x.png',
-            destCss: 'dev/css/sprite_all.css',
+            destCss: 'resources/css/sprite_all.css',
             cssOpts: {
               cssSelector: function (item) {
                 return '.' + item.name;
@@ -65,24 +65,24 @@ module.exports = function(grunt) {
           my_target: {
             files: {
               'webroot/js/scripts.js': [
-                'dev/js/jquery.js',
-                'dev/js/jquery/jquery-ui.min.js',
-                'dev/js/jquery/jquery.menu-aim.js',
-                'dev/js/jquery/jquery.bxslider-rahisified.js',
-                'dev/js/jquery/jquery.validate.min.js',
-                'dev/js/jquery/jquery.mousewheel-3.0.6.pack.js',
-                'dev/js/jquery/jquery.fancybox.js',
-                'dev/js/jquery/sweet-alert.js',
-                'dev/js/bootstrap/alert.js',
-                'dev/js/bootstrap/modal.js',
-                'dev/js/bootstrap/affix.js',
-                'dev/js/bootstrap/tooltip.js',
-                'dev/js/bootstrap/dropdown.js',
-                'dev/js/lib/maps.google.js',
-                'dev/js/lib/bootstrap-select.min.js',
-                'dev/js/lib/bootstrap-notify.js',
-                'dev/lib/picturefill.min.js',
-                'dev/js/default.js'
+                'resources/js/jquery.js',
+                'resources/js/jquery/jquery-ui.min.js',
+                'resources/js/jquery/jquery.menu-aim.js',
+                'resources/js/jquery/jquery.bxslider-rahisified.js',
+                'resources/js/jquery/jquery.validate.min.js',
+                'resources/js/jquery/jquery.mousewheel-3.0.6.pack.js',
+                'resources/js/jquery/jquery.fancybox.js',
+                'resources/js/jquery/sweet-alert.js',
+                'resources/js/bootstrap/alert.js',
+                'resources/js/bootstrap/modal.js',
+                'resources/js/bootstrap/affix.js',
+                'resources/js/bootstrap/tooltip.js',
+                'resources/js/bootstrap/dropdown.js',
+                'resources/js/lib/maps.google.js',
+                'resources/js/lib/bootstrap-select.min.js',
+                'resources/js/lib/bootstrap-notify.js',
+                'resources/lib/picturefill.min.js',
+                'resources/js/default.js'
               ]
             }
           }
@@ -92,7 +92,7 @@ module.exports = function(grunt) {
           target: {
             files: [{
               expand: true,
-              cwd: 'dev/css',
+              cwd: 'resources/css',
               src: ['styles.css'],
               dest: 'webroot/css',
               ext: '_min.css'
@@ -103,9 +103,9 @@ module.exports = function(grunt) {
         copy: {
           main: {
             files: [
-              { expand: true, cwd: 'dev/img/bg/', src: '*', dest: 'webroot/img/bg/' },
-              { expand: true, cwd: 'dev/img/logos/', src: '*', dest: 'webroot/img/logos/' },
-              { expand: true, cwd: 'dev/img/jquery/jquery.fancybox/', src: '*', dest: 'webroot/img/jquery/jquery.fancybox/' }
+              { expand: true, cwd: 'resources/img/bg/', src: '*', dest: 'webroot/img/bg/' },
+              { expand: true, cwd: 'resources/img/logos/', src: '*', dest: 'webroot/img/logos/' },
+              { expand: true, cwd: 'resources/img/jquery/jquery.fancybox/', src: '*', dest: 'webroot/img/jquery/jquery.fancybox/' }
             ]
           }
         }
