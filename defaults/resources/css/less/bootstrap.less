@@ -1,0 +1,197 @@
+@import 'others/mixins.less';
+@import '../../../../admin/resources/bootstrap/less/mixins/grid-framework.less';
+@import '../../../../admin/resources/bootstrap/less/mixins/responsive-visibility.less';
+
+@min-width: 320px;
+
+body {
+    min-width: @min-width;
+}
+
+.breaker {
+    .clearfix();
+}
+
+// No gutters
+.row {
+    &.no-gutters {
+        & {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        & > [class^="col-"], & > [class*=" col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+// Spinners
+.input-group-btn-vertical {
+    & {
+        position: relative;
+        white-space: nowrap;
+        width: 1%;
+        vertical-align: middle;
+        display: table-cell;
+    }
+    & > .btn {
+        & {
+            display: block;
+            float: none;
+            font-size: 9px;
+            width: 100%;
+            max-width: 100%;
+            padding: 8px;
+            margin-left: -1px;
+            position: relative;
+            border-radius: 0;
+        }
+        &:first-child {
+            .borderRadius(0, 4px, 0, 0);
+        }
+        &:last-child {
+            margin-top: -2px;
+            .borderRadius(0, 0, 4px, 0);
+        }
+    }
+    .icon {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+    }
+}
+
+// Tab panel padding
+.tab-content {
+    & > .tab-pane {
+        padding: 15px 0;
+    }
+}
+
+/**
+ * CUSTOM GRID
+ */
+@screen-cxs     : @min-width;
+@screen-cxs-max : (@screen-xs - 1);
+@screen-txs     : @screen-xs;
+@screen-txs-max : 719px;
+
+.make-cxs-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @screen-cxs) and (max-width: @screen-cxs-max) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+.make-txs-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @screen-txs) and (max-width: @screen-txs-max) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+.make-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~".col-xs-@{index}, .col-cxs-@{index}, .col-txs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".col-xs-@{index}, .col-cxs-@{index}, .col-txs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+}
+
+@media (min-width: @screen-cxs) and (max-width: @screen-cxs-max) {
+  .make-grid(cxs);
+}
+
+@media (min-width: @screen-txs) and (max-width: @screen-txs-max) {
+  .make-grid(txs);
+}
+
+// Visibility utilities
+.visible-cxs {
+  .responsive-invisibility();
+}
+
+.visible-cxs-block,
+.visible-cxs-inline,
+.visible-cxs-inline-block {
+  display: none !important;
+}
+
+.visible-cxs {
+  @media (min-width: @screen-cxs) and (max-width: @screen-cxs-max){
+    .responsive-visibility();
+  }
+}
+.visible-cxs-block {
+  @media (min-width: @screen-cxs) and (max-width: @screen-cxs-max){
+    display: block !important;
+  }
+}
+.visible-cxs-inline {
+  @media (min-width: @screen-cxs) and (max-width: @screen-cxs-max){
+    display: inline !important;
+  }
+}
+.visible-cxs-inline-block {
+  @media (min-width: @screen-cxs) and (max-width: @screen-cxs-max){
+    display: inline-block !important;
+  }
+}
+
+.hidden-cxs {
+  @media (min-width: @screen-cxs) and (max-width: @screen-cxs-max){
+    .responsive-invisibility();
+  }
+}
+
+.visible-txs {
+  .responsive-invisibility();
+}
+
+.visible-txs-block,
+.visible-txs-inline,
+.visible-txs-inline-block {
+  display: none !important;
+}
+
+.visible-txs {
+  @media (min-width: @screen-txs) and (max-width: @screen-txs-max){
+    .responsive-visibility();
+  }
+}
+.visible-txs-block {
+  @media (min-width: @screen-txs) and (max-width: @screen-txs-max){
+    display: block !important;
+  }
+}
+.visible-txs-inline {
+  @media (min-width: @screen-txs) and (max-width: @screen-txs-max){
+    display: inline !important;
+  }
+}
+.visible-txs-inline-block {
+  @media (min-width: @screen-txs) and (max-width: @screen-txs-max){
+    display: inline-block !important;
+  }
+}
+
+.hidden-txs {
+  @media (min-width: @screen-txs) and (max-width: @screen-txs-max){
+    .responsive-invisibility();
+  }
+}

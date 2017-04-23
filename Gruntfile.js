@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
         watch: {
             less: {
-                files: 'resources/less/*/*.less',
+                files: './resources/less/*/*.less',
                 tasks: ['css']
             },
             js: {
@@ -20,12 +20,17 @@ module.exports = function(grunt) {
         less: {
             compile: {
                 files: {
-                    'resources/less/import.css' : 'resources/less/import.less'
+                    './webroot/less/import.css' : './resources/less/import.less'
                 }
             },
             bootstrap: {
                 files: {
-                    'resources/css/bootstrap.css' : 'resources/css/bootstrap/bootstrap.less'
+                    './webroot/css/bootstrap.css' : './resources/css/bootstrap/bootstrap.less'
+                }
+            },
+            default: {
+                files: {
+                    './webroot/css/default.css' : './defaults/resources/css/less/import.less'
                 }
             }
         },
@@ -33,16 +38,17 @@ module.exports = function(grunt) {
         concat_css: {
           all: {
             src: [
-              'resources/css/reset.css',
-              'resources/css/bootstrap.css',
-              'resources/css/lib/bootstrap-select.min.css',
-              'resources/css/lib/bootstrap-notify.css',
-              'resources/css/jquery/jquery-ui.css',
-              'resources/css/jquery/jquery.fancybox.css',
-              'resources/css/sprite_all.css',
-              'resources/less/import.css'
+              './resources/css/reset.css',
+              './webroot/css/bootstrap.css',
+              './webroot/css/default.css',
+              './resources/css/lib/bootstrap-select.min.css',
+              './resources/css/lib/bootstrap-notify.css',
+              './resources/css/jquery/jquery-ui.css',
+              './resources/css/jquery/jquery.fancybox.css',
+              './resources/css/sprite_all.css',
+              './webroot/less/import.css'
             ],
-            dest: 'dev/css/styles.css'
+            dest: './webroot/css/styles.css'
           },
         },
 
@@ -65,24 +71,21 @@ module.exports = function(grunt) {
           my_target: {
             files: {
               'webroot/js/scripts.js': [
-                'resources/js/jquery.js',
-                'resources/js/jquery/jquery-ui.min.js',
-                'resources/js/jquery/jquery.menu-aim.js',
-                'resources/js/jquery/jquery.bxslider-rahisified.js',
-                'resources/js/jquery/jquery.validate.min.js',
-                'resources/js/jquery/jquery.mousewheel-3.0.6.pack.js',
-                'resources/js/jquery/jquery.fancybox.js',
-                'resources/js/jquery/sweet-alert.js',
-                'resources/js/bootstrap/alert.js',
-                'resources/js/bootstrap/modal.js',
-                'resources/js/bootstrap/affix.js',
-                'resources/js/bootstrap/tooltip.js',
-                'resources/js/bootstrap/dropdown.js',
-                'resources/js/lib/maps.google.js',
-                'resources/js/lib/bootstrap-select.min.js',
-                'resources/js/lib/bootstrap-notify.js',
-                'resources/lib/picturefill.min.js',
-                'resources/js/default.js'
+                './node_modules/jquery/dist/jquery.js',
+                './resources/js/jquery/jquery-ui.min.js',
+                './resources/js/jquery/jquery.menu-aim.js',
+                './resources/js/jquery/jquery.bxslider-rahisified.js',
+                './resources/js/jquery/jquery.validate.min.js',
+                './resources/js/jquery/jquery.mousewheel-3.0.6.pack.js',
+                './resources/js/jquery/jquery.fancybox.js',
+                './resources/js/jquery/sweet-alert.js',
+                './resources/js/bootstrap/modal.js',
+                './resources/js/bootstrap/dropdown.js',
+                './resources/js/lib/maps.google.js',
+                './resources/js/lib/bootstrap-select.min.js',
+                './resources/js/lib/bootstrap-notify.js',
+                './resources/lib/picturefill.min.js',
+                './resources/js/default.js'
               ]
             }
           }
@@ -92,9 +95,9 @@ module.exports = function(grunt) {
           target: {
             files: [{
               expand: true,
-              cwd: 'resources/css',
+              cwd: './webroot/css',
               src: ['styles.css'],
-              dest: 'webroot/css',
+              dest: './webroot/css',
               ext: '_min.css'
             }]
           }
@@ -103,13 +106,11 @@ module.exports = function(grunt) {
         copy: {
           main: {
             files: [
-              { expand: true, cwd: 'resources/img/bg/', src: '*', dest: 'webroot/img/bg/' },
-              { expand: true, cwd: 'resources/img/logos/', src: '*', dest: 'webroot/img/logos/' },
-              { expand: true, cwd: 'resources/img/jquery/jquery.fancybox/', src: '*', dest: 'webroot/img/jquery/jquery.fancybox/' }
+              { expand: true, cwd: './resources/img/', src: '*/**', dest: './webroot/img/' },
+              { expand: true, cwd: './resources/fonts/', src: '*/**', dest: './webroot/fonts/' }
             ]
           }
         }
-
     });
 
     // Tasks.
@@ -124,8 +125,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('bootstrap', ['less:bootstrap']);
-    grunt.registerTask('img', ['sprite', 'copy', 'less:compile', 'concat_css:all', 'cssmin']);
     grunt.registerTask('css', ['less:compile', 'concat_css:all', 'cssmin']);
-    grunt.registerTask('deploy', ['sprite', 'copy', 'less:compile', 'concat_css:all', 'cssmin', 'uglify']);
+    grunt.registerTask('img', ['sprite', 'copy', 'css']);
+    grunt.registerTask('deploy', ['sprite', 'copy', 'bootstrap', 'less:default', 'css', 'uglify']);
 
 };

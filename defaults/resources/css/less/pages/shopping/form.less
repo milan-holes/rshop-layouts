@@ -1,0 +1,139 @@
+.cart-form {
+    &--default {
+        .cart-form__tabs {
+            border-bottom: 1px solid @defaultBorderColor;
+            margin-bottom: 70px;
+            padding-bottom: 50px;
+
+            li {
+                padding: 0 15px;
+                width: 33.3333%;
+
+                @media (max-width: @screen-xs-max) {
+                    & {
+                        width: 100%;
+                    }
+                    a {
+                        padding: 15px 20px;
+                    }
+                }
+                @media (min-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+                    strong {
+                        display: block;
+                    }
+                }
+
+                &:hover, &.active {
+                    a, a:hover, a:focus {
+                        color: #fff;
+                        border-color: @primaryColor;
+                        background-color: @primaryColor;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            a {
+                .borderRadius(2px);
+                .transition(.3s);
+                padding: 30px 20px;
+                display: block;
+                margin-bottom: 10px;
+                border: 1px solid @defaultBorderColor;
+                box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+                font-size: 14px;
+                font-family: @primaryFont;
+                color: @primaryTextColor;
+                text-decoration: none;
+
+                span {
+                    position: relative;
+                    display: block;
+                    padding-left: 22px;
+                    margin-bottom: 10px;
+                    font-family: @secondaryFont;
+                    font-size: 18px;
+                }
+
+                i {
+                    .transition(.3s);
+                    font-size: 18px;
+                    color: @primaryColor;
+                    position: absolute;
+                    left: 4px;
+                    top: 3px;
+                }
+            }
+        }
+        .cart-form__content {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__sheet {
+        &--default {
+            .cart-form__title {
+                font-family: @secondaryFont;
+                font-size: 20px;
+                line-height: 24px;
+                margin: 10px 0 25px;
+                text-transform: uppercase;
+            }
+            .cart-form__box {
+                border: 0;
+                margin: 0 -15px;
+                padding: 0;
+            }
+            .cart-form__switch {
+                margin: 0;
+
+                &__item {
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    padding-right: 20px;
+                    position: relative;
+
+                    input[type="radio"] {
+                        .checkbox(@moduleCheckboxType);
+                    }
+
+                    label {
+                        cursor: pointer;
+                        font-size: 15px;
+                        font-weight: bold;
+                        margin: 0;
+                    }
+                }
+            }
+            .cart-form__checkbox {
+                position: relative;
+
+                input[type="checkbox"] {
+                    .checkbox(@moduleCheckboxType);
+                }
+            }
+            .cart-form {
+                &__social {
+                    &__wrapper {
+                        @media (max-width: @screen-sm-max) {
+                            padding-bottom: 20px;
+                        }
+                    }
+                    .btn {
+                        @media (max-width: @screen-cxs-max) {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+            .form-group>label {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+}

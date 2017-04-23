@@ -2,6 +2,6 @@
 class Cart {
     public function productPrice($product)
     {
-        return '4,50 €';
+        return isset($product['price']) ? $product['price'] : '4,50 €';
     }
 }

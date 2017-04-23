@@ -1,6 +1,12 @@
 {
   "name": "RSHOP",
   "version": "0.1.0",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "underscore": "^1.8.3",
+    "fancybox": "^3.0.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-concat-css": "^0.3.1",

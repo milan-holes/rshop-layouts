@@ -4,7 +4,6 @@
     echo $this->fetch('content');
     echo $this->element('footer');
     ?>
-
     <div class="overlay overlay--white"></div>
 </div>
 
@@ -18,4 +17,5 @@
     <div class="var--lg visible-lg"></div>
 </div>
 
-<?= ''//$this->cell('Rshop/Frontend.Menu', ['find' => ['level' => 2, 'threaded' => true]], ['customTemplate' => 'mobile']) ?>
+<?php
+echo $this->element('mobile_menu');

@@ -62,6 +62,8 @@ class Url {
     {
         if (is_array($url)) {
 
+        } else {
+            return $url . '.html';
         }
 
         return $url;

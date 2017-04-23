@@ -1,0 +1,101 @@
+// autocomplete
+.ui-autocomplete {
+    background: white;
+    cursor: default;
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 0;
+    width: 1px;
+
+    li {
+        font-size: 13px;
+        padding-left: 5px;
+
+        a {
+            & > div {
+                .inlineBlock();
+                margin-top: 6px;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .Products {}
+
+    .Categories {}
+
+    .noresults {}
+
+    .all {
+        & {
+            .boxSizing(border-box);
+            background: #383737;
+            padding: 10px;
+        }
+        &:hover {
+            a, a.ui-state-focus {
+                background: transparent;
+                border: none;
+                text-decoration: none;
+                color: #fff;
+                span {
+                    color: #fff;
+                }
+            }
+        }
+        a {
+            span {
+                font-weight: bold;
+                color: #fff;
+            }
+            &.ui-state-focus {
+                & {
+                    background: transparent;
+                    border: none;
+                    text-decoration: none;
+                    color: #fff;
+                }
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// slider
+.ui-spinner.ui-widget {
+    border: 0;
+    .ui-spinner-input {
+        width: 94%;
+    }
+    .ui-spinner-button {
+        cursor: pointer;
+        right: 10px;
+    }
+    .ui-spinner-up {
+        top: 2px;
+    }
+    .ui-spinner-down {
+        bottom: 2px;
+    }
+}
+
+// datepicker
+.ui-datepicker {
+    .ui-widget-header {
+        border: 1px solid @defaultBorderColor;
+        background: @primaryColor;
+        color: @primaryColorText;
+    }
+
+    .ui-state-highlight {
+        border: 1px solid darken(@primaryColor, 20%);
+        background: @primaryColor;
+        color: @primaryColorText;
+    }
+}

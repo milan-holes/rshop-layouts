@@ -1,0 +1,33 @@
+.cart-totals {
+    &__total {
+        font-size: 18px;
+        td {
+            padding-top: 10px;
+        }
+    }
+    .cart-totals__discount {}
+
+    &--default {
+        .cart-totals__wrapper {
+            border-top: 1px solid @defaultBorderColor;
+            margin: 0;
+        }
+        .cart-totals__box {
+            float: right;
+            padding: 40px;
+        }
+        .cart-totals__table {
+            font-family: @secondaryFont;
+
+            td {
+                & {
+                    padding: 3px 7px;
+                }
+                &.total {
+                    font-size: 24px;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}

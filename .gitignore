@@ -1,7 +1,10 @@
+.idea/*
 _files/*
 node_modules/*/*
 dev/less/import.css
 dev/css/styles.css
 webroot/css/styles_min.css
 webroot/js/scripts.js
+webroot/*/*
 _note.txt
+.DS_Store

@@ -1,0 +1,24 @@
+@import "../../others/common.less";
+
+.steps {
+    & {
+        overflow: hidden;
+        margin-bottom: 45px;
+    }
+    &__title {
+        font-size: 24px;
+    }
+    &__item {
+        & {
+            text-align: center;
+            float: left;
+            width: 25%;
+            height: 20px;
+            position: relative;
+        }
+        a {
+            display: block;
+            pointer-events: none;
+        }
+    }
+}

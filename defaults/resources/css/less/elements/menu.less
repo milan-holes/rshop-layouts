@@ -1,0 +1,66 @@
+@import "../others/common.less";
+
+.navbar-nav {
+    [data-toggle="dropdown"] {
+        .inlineBlock();
+        &:after {
+            .inlineBlock();
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px dashed;
+            content: '';
+            height: 0;
+            margin-left: 5px;
+            width: 0;
+            vertical-align: middle;
+        }
+    }
+}
+
+.l-menu {
+
+    // START: l-menu template one
+    &--one {
+        .l-menu__box {
+            padding: 0 40px 35px 0;
+            @media (max-width: 1599px) {
+                padding-right: 0;
+            }
+        }
+
+        .l-menu__title {
+            font-family: @secondaryFont;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .l-menu__navigation {
+            border: 1px solid @defaultBorderColor;
+            border-radius: 4px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+            padding: 20px 25px;
+
+            li {
+                padding: 5px 0;
+
+                a {
+                    color: @secondaryTextColor;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .l-menu__tags {
+            a {
+                .inlineBlock();
+                .transition(.3s);
+                border: 1px solid @defaultBorderColor;
+                border-radius: 4px;
+                margin: 0 12px 12px 0;
+                padding: 3px 10px;
+            }
+        }
+    }
+    // END: l-menu template one
+}

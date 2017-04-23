@@ -1,0 +1,86 @@
+.cart-modules {
+    // resets
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    &--one {
+        .cart-modules__wrapper {
+
+        }
+        .cart-modules__error {
+
+        }
+        .cart-modules__title {
+
+        }
+        .cart-modules__list {
+
+        }
+        .cart-modules__item {
+            .borderRadius(4px);
+            padding: 20px 35px 20px 15px;
+            position: relative;
+            background: @shoppingModuleBackground;
+            border: 1px solid @shoppingModuleBackground;
+            margin-bottom: 20px;
+
+            &__name {
+                font-size: 15px;
+                line-height: 18px;
+            }
+            &__description {
+                & {
+                    display: none;
+                    line-height: 1.4em;
+                    margin-top: 10px;
+                }
+                &.in {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+            &__price {
+                color: #db2232;
+                padding-left: 4px;
+            }
+            input[type="radio"] {
+                .checkbox(@moduleCheckboxType);
+            }
+
+            &__collapse {
+                .transition(.3s);
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 20px 15px 20px 10px;
+                display: block;
+                color: @secondaryTextColor;
+                text-decoration: none;
+                outline: 0;
+                i {
+                    &[class$="up"] {
+                        display: block;
+                    }
+                    &[class$="down"] {
+                        display: none;
+                    }
+                }
+                &.collapsed {
+                    i {
+                        &[class$="up"] {
+                            display: none;
+                        }
+                        &[class$="down"] {
+                            display: block;
+                        }
+                    }
+                }
+                &:hover {
+                    color: @secondaryTextColorHover;
+                }
+            }
+        }
+
+    }
+}

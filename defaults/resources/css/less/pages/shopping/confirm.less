@@ -1,0 +1,88 @@
+.cart-confirm {
+    &--default {
+        padding-bottom: 40px;
+
+        .cart-confirm__title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 20px;
+            margin: 0 0 20px;
+            text-transform: none;
+        }
+        .cart-confirm__box {
+            .borderRadius(2px);
+            border: 1px solid @defaultBorderColor;
+            font-size: 16px;
+            line-heigh: 1.4em;
+            margin-bottom: 20px;
+            padding: 25px 25px 15px;
+        }
+        .cart-confirm__table {
+            width: 100%;
+
+            th, td {
+                font-size: 14px;
+                line-height: 18px;
+                padding: 5px 0;
+            }
+            th {
+                font-weight: bold;
+                padding-right: 25px;
+                width: 25%;
+            }
+        }
+    }
+
+    &--one {
+        padding-bottom: 40px;
+
+        .cart-confirm__title {
+            font-size: 20px;
+            line-height: 24px;
+            margin: 10px 0 25px;
+            text-transform: uppercase;
+        }
+        .cart-confirm__subtitle {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 20px;
+            margin: 0 0 20px;
+            text-transform: none;
+        }
+        .cart-confirm__wrapper {
+            margin-bottom: 30px;
+        }
+        .cart-confirm__box {
+            .borderRadius(4px);
+            background: #eff5f8;
+            border: 0;
+            font-size: 14px;
+            line-height: 1.4em;
+            margin-bottom: 20px;
+            padding: 25px 15px 15px;
+        }
+        .cart-confirm__links {
+            a {
+                display: inline-block;
+                font-size: 13px;
+                margin: 0 80px 10px 0;
+                text-decoration: none;
+            }
+        }
+        .cart-confirm__product {
+            border-top: 1px solid @defaultBorderColor;
+            border-bottom: 1px solid @defaultBorderColor;
+            overflow: hidden;
+
+            & > div {
+                height: 76px;
+            }
+            &:first-child {
+                border-top: 0;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}

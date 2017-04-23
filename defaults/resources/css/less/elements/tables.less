@@ -1,0 +1,38 @@
+.table {
+    &--default {
+        .table__header {
+            text-transform: uppercase;
+            padding: 12px 0;
+            color: rgba(0,0,0,0.55);
+            overflow: hidden;
+        }
+        .table__body {
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .table__row {
+            .borderRadius(2px);
+            background: @defaultBoxColor;
+            border: 1px solid @defaultBorderColor;
+            margin-bottom: 10px;
+            overflow: hidden;
+
+            & > div {
+                padding: 15px;
+            }
+        }
+
+        .table__actions {
+            background: #fff;
+            text-align: center;
+
+            a {
+                color: #000;
+                display: block;
+                font-size: 12px;
+                padding: 0;
+            }
+        }
+    }
+}

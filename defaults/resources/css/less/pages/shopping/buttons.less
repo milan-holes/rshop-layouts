@@ -1,0 +1,21 @@
+.cart-buttons {
+    input[type="checkbox"] {
+        .checkbox(@moduleCheckboxType);
+
+        label {
+            font-weight: bold;
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+
+    &__checkbox {
+        float: right;
+        margin-bottom: 20px;
+        width: 385px;
+
+        @media only screen and (max-width: @screen-xs-max ) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import "../others/common.less";
+
+.small-header {
+	&--default {
+		.boxSizing(border-box);
+	    background: #1b1b1b;
+	    color: #fff;
+	    height: 83px;
+	    position: relative;
+	    position: relative;
+
+	    .small-header__logo {
+		    border-right: 1px solid #282828;
+		    height: 83px;
+		    left: 15px;
+		    position: absolute;
+		    top: 0;
+		    width: 292px;
+	    	border-left: 1px solid #282828;
+
+		    img {
+			    bottom: 0;
+			    left: 20px;
+			    margin: auto;
+			    max-height: 100%;		    	
+			    max-width: 235px;
+			    position: absolute;
+			    right: auto;
+			    top: 0;
+		    }
+	    }
+
+		a:not(.btn) {
+			.transition(.3s);
+			color: #787d7f;
+
+		    &:hover {
+			    color: #fff;
+			    text-decoration: none;			    	
+		    }
+		}
+
+	    .small-header__account {
+			border-left: 1px solid #282828;
+			float: left;
+			height: 83px;
+			padding: 20px 25px 0;
+
+			strong {
+			    display: block;
+			    font-size: 16px;
+			    font-weight: bold;
+			    padding-bottom: 5px;				
+			}
+
+			a {
+			    display: inline-block;
+			    font-size: 12px;
+			    margin: 0 20px 0 0;		
+			    text-decoration: underline;
+			}
+	    }
+
+	    .small-header__back {
+		    border-left: 1px solid #282828;
+		    border-right: 1px solid #282828;	
+		    display: block;
+		    float: left;
+		    font-size: 34px;
+		    height: 83px;
+		    position: relative;
+		    text-align: center;  
+		    width: 83px;
+		    &:hover {
+			    background: #cf2436;	
+		    }  	
+
+		    i {
+		    	.absoluteCenter();
+		    	height: 34px;
+		    }
+	    }
+	}
+}

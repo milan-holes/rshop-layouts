@@ -1,0 +1,88 @@
+.btn {
+    .borderRadius(2px);
+    .transition(.3s);
+    border: 0;
+    position: relative;
+
+    &--submit, &--primary, &--brand {
+        background: @primaryBtnBackground;
+        color: @primaryBtnColor;
+
+        &:hover, &:focus {
+            background: @primaryBtnBackgroundHover;
+            color: @primaryBtnColorHover;
+        }
+        &.btn--lg {
+            i {
+                line-height: 67px;
+                position: absolute;
+                right: 25px;
+                top: 0;
+            }
+        }
+    }
+
+    &--remove, &--delete {
+        background: @removeBtnBackground;
+        border: @removeBtnBorder;
+        color: @removeBtnColor;
+
+        &:hover, &:focus {
+            background: @removeBtnBackgroundHover;
+            border: @removeBtnBorderHover;
+            color: @removeBtnColorHover;
+        }
+    }
+
+    &--secondary {
+        background: @secondaryBtnBackground;
+        color: @secondaryBtnColor;
+
+        &:hover, &:focus {
+            background: @secondaryBtnBackgroundHover;
+            color: @secondaryBtnColorHover;
+        }
+    }
+
+    &--back {
+        background: @backBtnBackground;
+        color: @backBtnColor;
+        &:hover, &:focus {
+            background: @backBtnBackgroundHover;
+            color: @backBtnColorHover;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    &--md {
+        font-size: 16px;
+        padding: 17px 25px 17px 35px;
+    }
+    &--lg {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 20px;
+
+        &.btn--submit {
+            padding-left: 60px;
+            padding-right: 60px;
+
+            @media only screen and (max-width: @screen-xs-max ) {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        i {
+            font-size: 18px;
+        }
+
+        @media only screen and (max-width: @screen-xs-max ) {
+            font-size: 14px;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+    }
+}

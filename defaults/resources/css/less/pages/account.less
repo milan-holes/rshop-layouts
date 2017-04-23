@@ -1,0 +1,97 @@
+@import "../others/common.less";
+@import "account/lostpassword.less";
+
+.account {
+    &__title {
+        font-family: @primaryFont;
+        font-size: 24px;
+        line-height: 30px;
+        color: @primaryTextColor;
+        text-transform: uppercase;
+        margin: 10px 0 20px;
+    }
+
+    &__description {
+        margin-bottom: 10px;
+    }
+
+    &__links {
+        a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+
+    &__table {
+        &__header {
+            text-transform: uppercase;
+            padding: 12px 0px;
+            color: rgba(0, 0, 0, .55);
+            overflow: hidden;
+        }
+        &__body {
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        &__row {
+            .borderRadius(2px);
+            background: #f6f6f6;
+            border: 1px solid #ededed;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        &__column {
+            font-size: 14px;
+            line-height: 18px;
+            padding: 15px;
+            color: #000;
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+        }
+        &__action {
+            background: #fff;
+            position: relative;
+            padding: 15px 10px;
+            text-align: center;
+        }
+        &__button {
+            background: #fff;
+            color: #000;
+            font-size: 12px;
+            padding: 0;
+        }
+    }
+
+    &__filter {
+        & {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .bootstrap-select {
+            height: 33px;
+            max-width: 195px;
+        }
+        .form-group {
+            & {
+                margin: 0px;
+            }
+            label {
+                font-size: 12px;
+                line-height: 33px;
+                color: #000;
+                float: left;
+                width: 50%;
+                display: block;
+                margin: 0px;
+                text-transform: uppercase;
+            }
+        }
+        .form-control {
+            float: left;
+            width: 50%;
+            height: 33px;
+        }
+    }
+}
