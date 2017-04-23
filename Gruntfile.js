@@ -8,11 +8,11 @@ module.exports = function(grunt) {
                 tasks: ['css']
             },
             js: {
-                files: 'resources/js/*.js',
+                files: './resources/js/*.js',
                 tasks: ['uglify']
             },
             img: {
-                files: 'resources/img/*/*',
+                files: './resources/img/*/*',
                 tasks: ['img']
             }
         },
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
               './resources/css/lib/bootstrap-notify.css',
               './resources/css/jquery/jquery-ui.css',
               './resources/css/jquery/jquery.fancybox.css',
-              './resources/css/sprite_all.css',
+              './webroot/css/sprite_all.css',
               './webroot/less/import.css'
             ],
             dest: './webroot/css/styles.css'
@@ -54,11 +54,11 @@ module.exports = function(grunt) {
 
         sprite:{
           all: {
-            src: ['resources/img/*/*.png', '!resources/img/bg/*', '!resources/img/logos/*'],
-            retinaSrcFilter: ['resources/img/*/*@2x.png', '!resources/img/bg/*', '!resources/img/logos/*'],
-            dest: 'webroot/img/sprite_all.png',
-            retinaDest: 'webroot/img/sprite_all@2x.png',
-            destCss: 'resources/css/sprite_all.css',
+            src: ['./resources/img/*/*.png', '!resources/img/bg/*', '!resources/img/logos/*'],
+            retinaSrcFilter: ['./resources/img/*/*@2x.png', '!resources/img/bg/*', '!resources/img/logos/*'],
+            dest: './webroot/img/sprite_all.png',
+            retinaDest: './webroot/img/sprite_all@2x.png',
+            destCss: './webroot/css/sprite_all.css',
             cssOpts: {
               cssSelector: function (item) {
                 return '.' + item.name;
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         uglify: {
           my_target: {
             files: {
-              'webroot/js/scripts.js': [
+              './webroot/js/scripts.js': [
                 './node_modules/jquery/dist/jquery.js',
                 './resources/js/jquery/jquery-ui.min.js',
                 './resources/js/jquery/jquery.menu-aim.js',
