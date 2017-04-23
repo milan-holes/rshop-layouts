@@ -12,7 +12,7 @@
 <?php
 echo $this->fetch('layout');
 ?>
-<script src="js/scripts.js?<?= date('YmdHis') ?>"></script>
+<script src="webroot/js/scripts.js?<?= date('YmdHis') ?>"></script>
 <?php
 echo $this->fetch('scripts');
 ?>
