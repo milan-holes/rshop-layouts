@@ -62,7 +62,8 @@
     </form>
 </div>
 
-<script>
+<?php
+$this->Html->scriptBlock('
   $(function() {
     $( "#slider-range" ).slider({
       range: true,
@@ -71,11 +72,11 @@
       max: 500,
       values: [ 80, 300 ],
       slide: function( event, ui ) {
-        $( "#filter-price-from" ).val( $( "#slider-range" ).slider( "values", 0 ) + ' €');
-        $( "#filter-price-to" ).val( $( "#slider-range" ).slider( "values", 1 ) + ' €');
+        $( "#filter-price-from" ).val( $( "#slider-range" ).slider( "values", 0 ) + \' €\');
+        $( "#filter-price-to" ).val( $( "#slider-range" ).slider( "values", 1 ) + \' €\');
       }
     });
-    $( "#filter-price-from" ).val( $( "#slider-range" ).slider( "values", 0 ) + ' €');
-    $( "#filter-price-to" ).val( $( "#slider-range" ).slider( "values", 1 ) + ' €');
+    $( "#filter-price-from" ).val( $( "#slider-range" ).slider( "values", 0 ) + \' €\');
+    $( "#filter-price-to" ).val( $( "#slider-range" ).slider( "values", 1 ) + \' €\');
   });
-  </script>
+');

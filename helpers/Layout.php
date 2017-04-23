@@ -1,10 +1,12 @@
 <?php
 require_once 'Configure.php';
 require_once 'Url.php';
+require_once 'Html.php';
 
 class Layout {
     public $Configure;
     public $Url;
+    public $Html;
 
     protected $_blocks = [];
     protected $_layout;
@@ -15,6 +17,7 @@ class Layout {
     {
         $this->Configure = new Configure();
         $this->Url = new Url();
+        $this->Html = new Html($this);
         foreach (glob("data/*.php") as $filename) {
             $item = str_replace(['data/', '.php'], '', $filename);
             $this->_data[$item] = include $filename;
@@ -44,6 +47,15 @@ class Layout {
     public function assign($key, $value)
     {
         $this->_blocks[$key] = $value;
+    }
+
+    public function append($key, $value)
+    {
+        if (!isset($this->_blocks[$key])) {
+            $this->_blocks[$key] = '';
+        }
+
+        $this->_blocks[$key] .= $value;
     }
 
     public function fetch($key)
