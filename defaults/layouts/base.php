@@ -13,9 +13,12 @@
 echo $this->fetch('layout');
 ?>
 <script src="webroot/js/scripts.js?<?= date('YmdHis') ?>"></script>
+
+<script type="text/javascript">
 <?php
 echo $this->fetch('scripts');
 ?>
+</script>
 
 </body>
 </html>
