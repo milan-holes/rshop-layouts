@@ -15,6 +15,7 @@ Obsah:
 - takisto je to s javascriptom - tiez ho treba delit ("resources/js/parts/*.js" alebo "resources/js/default.js")
 - mixiny a premenne si prdavaj podla potreby v ramci "resources/sass/init" priecinku
 - externe js a css treba pridat v "gulpfile.js" do pola "externalCss" alebo "externalJs", gulp z nich potom vygeneruje jeden subor
+- v "resources/sass/init/variables.scss" si nastav hranice v "$queries" rovnako ako si ich nastavis pre bootstrap
 
 
 2. Struktura projektu:
