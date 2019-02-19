@@ -1,21 +1,33 @@
-<div class="wrapper">
-    <?php
-    echo $this->element('header');
-    echo $this->fetch('content');
-    echo $this->element('footer');
-    ?>
-    <div class="overlay overlay--white"></div>
+<div class="l-base">
+    <header class="l-header">
+        <?= $this->element('header') ?>
+    </header>
+
+    <main class="l-content">
+        <?= $this->fetch('content') ?>
+    </main>
+
+    <footer class="l-footer">
+        <?= $this->element('footer') ?>
+    </footer>
 </div>
 
-<div class="overlay overlay--black"></div>
-<div class='notifications top-right'></div>
-<div class="var">
-    <div class="var--cxs visible-cxs"></div>
-    <div class="var--xs visible-xs"></div>
-    <div class="var--sm visible-sm"></div>
-    <div class="var--md visible-md"></div>
-    <div class="var--lg visible-lg"></div>
+<div class="l-additional">
+    <div class="c-overlay"></div>
+
+    <div class="c-var">
+        <div class="c-var__item cxs-is-visible"></div>
+        <div class="c-var__item xs-is-visible"></div>
+        <div class="c-var__item sm-is-visible"></div>
+        <div class="c-var__item md-is-visible"></div>
+        <div class="c-var__item lg-is-visible"></div>
+    </div>
 </div>
 
-<?php
-echo $this->element('mobile_menu');
+<?= $this->element('mobile_menu'); ?>
+
+<?php include('elements/aside_cart.php'); ?>
+<?php include('elements/aside_nav.php'); ?>
+<?php include('elements/aside_order.php'); ?>
+
+<?php include('elements/modal_login.php'); ?>

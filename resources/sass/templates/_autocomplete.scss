@@ -1,0 +1,100 @@
+.autocomplete {
+    & {
+        box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, .1);
+        border: none;
+        background: #fff;
+    }
+    .ui-menu-item {
+        & {
+            border-top: 1px solid $c_border;
+            padding: 0px;
+            display: block;
+            background: #fff;
+        }
+        &.ui-state-focus {
+            margin: 0px;
+            border: none;
+            border-top: 1px solid $c_border;
+            background: #F1F0F1;
+        }
+        a {
+            & {
+                @include fnt((ff: $f_primary_regular, fs: 13px, lh: 18px));
+                padding: 10px;
+                display: block;
+                color: #000;
+            }
+            &:hover {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+        td {
+            vertical-align: middle;
+        }
+        span {
+            @include fnt((ff: $f_primary_bold));
+            color: yellow;
+        }
+        &.autocomplete--heading {
+            & {
+                background: gray;
+                border-top: none;
+            }
+            h3 {
+                @include fnt((ff: $f_primary_bold, fs: 13px, lh: 19px));
+                color: #fff;
+                margin: 0px;
+                padding: 10px;
+            }
+            &.ui-state-focus {
+                & {
+                    background: gray;
+                }
+                h3 {
+                    color: #fff;
+                }
+            }
+        }
+        &.autocomplete--noresults {
+            h3 {
+                @include fnt((ff: $f_primary_bold, fs: 13px, lh: 19px));
+                margin: 0px;
+                padding: 10px;
+            }
+        }
+        &.autocomplete--all {
+            a {
+                border-radius: 2px;
+                @include fnt((ff: $f_primary_bold));
+                text-align: center;
+                color: #000;
+                background: yellow;
+                margin: 5px;
+            }
+            &.ui-state-focus {
+                & {
+                    background: #fff;
+                }
+                a {
+                    background: yellow;
+                }
+            }
+        }
+    }
+    &__img {
+        & {
+            position: relative;
+            width: 36px;
+            height: 36px;
+        }
+        img {
+            @include absoluteCentered;
+            max-width: 90%;
+            max-height: 90%;
+        }
+    }
+    &__name {
+        padding-left: 8px;
+    }
+}

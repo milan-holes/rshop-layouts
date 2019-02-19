@@ -3,8 +3,8 @@
         <div class="aside__title">Navigácia</div>
         <a href="#" title="Zavrieť" class="aside__close">
             Zavrieť
-            <i class="ico ico--aside--close--white right orig"></i>
-            <i class="ico ico--aside--close--red right hover"></i>
+            <i class="ico ico-aside--close--white right orig"></i>
+            <i class="ico ico-aside--close--red right hover"></i>
         </a>
     </div>
     <div class="aside__content">
@@ -50,29 +50,29 @@
         <div class="aside--nav__item aside--nav__item--delimiter">Ďalšie stránky</div>
         <div class="aside--nav__item aside--nav__item--link">
             <a href="#" title="Výpredaj" class="ico__hover">
-                <i class="ico left ico--sale orig"></i>
-                <i class="ico left ico--sale--yellow hover"></i>
+                <i class="ico left ico-sale orig"></i>
+                <i class="ico left ico-sale--yellow hover"></i>
                 Výpredaj
             </a>
         </div>
         <div class="aside--nav__item aside--nav__item--link">
             <a href="#" title="Katalógy" class="ico__hover">
-                <i class="ico left ico--catalogs orig"></i>
-                <i class="ico left ico--catalogs--yellow hover"></i>
+                <i class="ico left ico-catalogs orig"></i>
+                <i class="ico left ico-catalogs--yellow hover"></i>
                 Katalógy
             </a>
         </div>
         <div class="aside--nav__item aside--nav__item--link">
             <a href="#" title="Certifikáty" class="ico__hover">
-                <i class="ico left ico--certificats orig"></i>
-                <i class="ico left ico--certificats--yellow hover"></i>
+                <i class="ico left ico-certificats orig"></i>
+                <i class="ico left ico-certificats--yellow hover"></i>
                 Certifikáty
             </a>
         </div>
         <div class="aside--nav__item aside--nav__item--link">
             <a href="#" title="Kontakt" class="ico__hover">
-                <i class="ico left ico--atsign orig"></i>
-                <i class="ico left ico--atsign--yellow hover"></i>
+                <i class="ico left ico-atsign orig"></i>
+                <i class="ico left ico-atsign--yellow hover"></i>
                 Kontakt
             </a>
         </div>

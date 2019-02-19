@@ -6,5 +6,6 @@ dev/css/styles.css
 webroot/css/styles_min.css
 webroot/js/scripts.js
 webroot/*/*
+.gulp-cache
 _note.txt
 .DS_Store

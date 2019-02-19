@@ -30,8 +30,8 @@
         </div>
         <div class="cart__products__item cart__products__item--delete col-xs-5 col-lg-5">
             <a href="#" title="Odstrániť produkt z košíka" class="ico__hover">
-                <i class="ico ico--delete--gray orig"></i>
-                <i class="ico ico--delete--red hover"></i>
+                <i class="ico ico-delete--gray orig"></i>
+                <i class="ico ico-delete--red hover"></i>
             </a>
         </div>
     </div>

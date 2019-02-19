@@ -23,8 +23,8 @@ $contact = array(
             <div class="contact__box">
                 <div class="contact__box__title"><?= $title ?></div>
                 <div class="contact__box__name"><?= $contact['name'] ?><span> (<?= $contact['position'] ?>)</span></div>
-                <div class="contact__box__phone"><i class="ico ico--contact--phone left"></i><a href="tel:<?= $contact['phone'] ?>" class="link link--bordered" title="<?= $contact['phone'] ?>"><?= $contact['phone'] ?></a></div>
-                <div class="contact__box__email"><i class="ico ico--contact--atsign left"></i><a href="mailto:<?= $contact['email'] ?>" class="link link--text" title="<?= $contact['email'] ?>"><?= $contact['email'] ?></a></div>
+                <div class="contact__box__phone"><i class="ico ico-contact--phone left"></i><a href="tel:<?= $contact['phone'] ?>" class="link link--bordered" title="<?= $contact['phone'] ?>"><?= $contact['phone'] ?></a></div>
+                <div class="contact__box__email"><i class="ico ico-contact--atsign left"></i><a href="mailto:<?= $contact['email'] ?>" class="link link--text" title="<?= $contact['email'] ?>"><?= $contact['email'] ?></a></div>
             </div>
         </div>
         <?php } ?>
@@ -41,8 +41,8 @@ $contact = array(
             <div class="contact__box">
                 <div class="contact__box__title"><?= $title ?></div>
                 <div class="contact__box__name"><?= $contact['name'] ?></div>
-                <div class="contact__box__phone"><i class="ico ico--contact--phone left"></i><a href="tel:<?= $contact['phone'] ?>" class="link link--bordered" title="<?= $contact['phone'] ?>"><?= $contact['phone'] ?></a></div>
-                <div class="contact__box__email"><i class="ico ico--contact--atsign left"></i><a href="mailto:<?= $contact['email'] ?>" class="link link--text" title="<?= $contact['email'] ?>"><?= $contact['email'] ?></a></div>
+                <div class="contact__box__phone"><i class="ico ico-contact--phone left"></i><a href="tel:<?= $contact['phone'] ?>" class="link link--bordered" title="<?= $contact['phone'] ?>"><?= $contact['phone'] ?></a></div>
+                <div class="contact__box__email"><i class="ico ico-contact--atsign left"></i><a href="mailto:<?= $contact['email'] ?>" class="link link--text" title="<?= $contact['email'] ?>"><?= $contact['email'] ?></a></div>
             </div>
         </div>
         <?php } ?>

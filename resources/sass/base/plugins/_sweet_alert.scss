@@ -1,0 +1,32 @@
+.sweet-alert {
+    & {
+        width: 512px;
+        margin-left: -256px;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+    }
+    @media (max-width: $xs-max) {
+        width: auto;
+        margin-left: 0;
+    }
+    button {
+        &.cancel {
+            & {
+                background: #fff;
+                border: 1px solid $c_border;
+                color: $c_red;
+            }
+            &:hover {
+                background: $c_red;
+                border: 1px solid $c_red;
+                color: #fff;
+            }
+        }
+        &.confirm {
+            background: $c_primary;
+        }
+    }
+}
+
+.sweet-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+}

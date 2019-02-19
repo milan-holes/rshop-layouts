@@ -1,7 +1,7 @@
 <form name="header_search" method="post">
     <div class="form-group nomargin inside">
         <label for="search_input">Napíšte číslo produktu alebo názov</label>
-        <i class="ico ico--search"></i>
+        <i class="ico ico-search"></i>
         <input type="text" name="search" class="form-control" id="search_input" placeholder="Napíšte číslo produktu alebo názov">
         <button type="submit" class="btn">Hľadať</button>
     </div>

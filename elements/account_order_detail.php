@@ -117,7 +117,7 @@ $order = array(
             <div class="order__box">
                 <h2 class="dashboard__title"><span><?= __('Adresa pre dopravu') ?></span></h2>
                 <div class="order__box__text">
-                    <i class="ico ico--square"></i>
+                    <i class="ico ico-square"></i>
                     <?= $order['shipping']['name'] . '<br>' ?>
                     <?= $order['shipping']['street'] . ', ' . $order['shipping']['zip'] . ' ' . $order['shipping']['town'] . '<br>' ?>
                     <?= $order['shipping']['country'] ?>
@@ -128,7 +128,7 @@ $order = array(
             <div class="order__box">
                 <h2 class="dashboard__title"><span><?= __('Adresa pre platbu') ?></span></h2>
                 <div class="order__box__text">
-                    <i class="ico ico--square"></i>
+                    <i class="ico ico-square"></i>
                     <?= $order['payment']['name'] . '<br>' ?>
                     <?= $order['payment']['street'] . ', ' . $order['payment']['zip'] . ' ' . $order['payment']['town'] . '<br>' ?>
                     <?= $order['payment']['country'] ?>
@@ -141,7 +141,7 @@ $order = array(
             <div class="order__box">
                 <h2 class="dashboard__title"><span><?= __('Adresa pre dopravu') ?></span></h2>
                 <div class="order__box__text">
-                    <i class="ico ico--square"></i>
+                    <i class="ico ico-square"></i>
                     <?= $order['shipping']['title'] ?>
                 </div>
             </div>
@@ -150,7 +150,7 @@ $order = array(
             <div class="order__box">
                 <h2 class="dashboard__title"><span><?= __('Adresa pre platbu') ?></span></h2>
                 <div class="order__box__text">
-                    <i class="ico ico--square"></i>
+                    <i class="ico ico-square"></i>
                     <?= $order['payment']['title'] ?>
                 </div>
             </div>

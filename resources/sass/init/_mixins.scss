@@ -1,0 +1,79 @@
+@mixin fnt($settings: ()) {
+    $defaults: (
+        ff: null,
+        fs: null,
+        lh: null,
+        c: null,
+        fw: normal
+    );
+
+    $options: map-merge($defaults, $settings);
+
+    @if map-get($options, ff) {
+        font-family: map-get($options, ff);
+        font-weight: map-get($options, fw);
+    }
+    @if map-get($options, fs) {
+        font-size: map-get($options, fs);
+    }
+    @if map-get($options, lh) {
+    	line-height: map-get($options, lh);
+    }
+    @if map-get($options, c) {
+    	color: map-get($options, c);
+    }
+}
+
+// mixins from frontend - don't change
+@mixin absoluteCentered($max_width: 100%, $max_height: 100%) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: $max_width;
+    max-height: $max_height;
+}
+
+@mixin breakerAfter {
+    &:after {
+        content: "";
+        clear: both;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+        display: block;
+    }
+}
+
+@mixin icoSize($size, $line_height: null, $height: null) {
+    font-size: $size;
+    line-height: if($line_height, $line_height, $size);
+    height: if($height, $height, $size);
+}
+
+@mixin valign($pos: relative) {
+    transform: translateY(-50%);
+    position: $pos;
+    top: 50%;
+}
+
+@mixin preserve3d {
+  transform-style: preserve-3d;
+}
+
+@mixin textOverflow {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin hideText {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}

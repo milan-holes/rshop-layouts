@@ -3,8 +3,8 @@
         <div class="aside__title">Hromadná objednávka</div>
         <a href="#" title="Zavrieť" class="aside__close">
             Zavrieť
-            <i class="ico ico--aside--close--white right orig"></i>
-            <i class="ico ico--aside--close--red right hover"></i>
+            <i class="ico ico-aside--close--white right orig"></i>
+            <i class="ico ico-aside--close--red right hover"></i>
         </a>
     </div>
     <div class="aside__content">
@@ -76,7 +76,7 @@
                 </tbody>
             </table>
             <span class="header__order__plus">+ </span><a href="#" title="pridať ďalšie 3 polia" class="aside--order__add">pridať ďalšie 3 polia</a>
-            <button class="aside--order__buy btn btn--cart"><i class="ico left ico--minicart"></i>Vložiť produkty do košíka</button>
+            <button class="aside--order__buy btn btn--cart"><i class="ico left ico-minicart"></i>Vložiť produkty do košíka</button>
         </form>
     </div>
     <div class="aside__footer">

@@ -8,19 +8,19 @@
             </div>
             <div class="footer__top__link hidden-xs hidden-sm col-md-19 col-lg-19">
                 <a href="tel:<?= $configurations['storePhone'] ?>" title="<?= $configurations['storePhone'] ?>">
-                    <i class="ico ico--tel--footer left"></i>
+                    <i class="ico ico-tel--footer left"></i>
                     <span><?= $configurations['storePhone'] ?></span>
                 </a>
             </div>
             <div class="footer__top__link hidden-xs hidden-sm col-md-19 col-lg-19">
                 <a href="tel:<?= $configurations['storePhone'] ?>" title="<?= $configurations['storePhone'] ?>">
-                    <i class="ico ico--phone left"></i>
+                    <i class="ico ico-phone left"></i>
                     <span><?= $configurations['storePhone'] ?></span>
                 </a>
             </div>
             <div class="footer__top__link footer__top__link--mail hidden-xs hidden-sm col-md-24 col-lg-22">
                 <a href="mailto:<?= $configurations['storeEmail'] ?>" title="<?= $configurations['storeEmail'] ?>">
-                    <i class="ico ico--atsign--footer left"></i>
+                    <i class="ico ico-atsign--footer left"></i>
                     <span><?= $configurations['storeEmail'] ?></span>
                 </a>
             </div>
@@ -31,19 +31,19 @@
             <div class="footer__bottom__box col-xs-100 col-sm-35 visible-xs visible-sm">
                 <div class="footer__bottom__box__link">
                     <a href="tel:<?= $configurations['storePhone'] ?>" title="<?= $configurations['storePhone'] ?>">
-                        <i class="ico ico--tel--footer left"></i>
+                        <i class="ico ico-tel--footer left"></i>
                         <span><?= $configurations['storePhone'] ?></span>
                     </a>
                 </div>
                 <div class="footer__bottom__box__link">
                     <a href="tel:<?= $configurations['storePhone'] ?>" title="<?= $configurations['storePhone'] ?>">
-                        <i class="ico ico--phone left"></i>
+                        <i class="ico ico-phone left"></i>
                         <span><?= $configurations['storePhone'] ?></span>
                     </a>
                 </div>
                 <div class="footer__bottom__box__link">
                     <a href="mailto:<?= $configurations['storeEmail'] ?>" title="<?= $configurations['storeEmail'] ?>" class="footer_mail">
-                        <i class="ico ico--atsign--footer--blue left"></i>
+                        <i class="ico ico-atsign--footer--blue left"></i>
                         <span><?= $configurations['storeEmail'] ?></span>
                     </a>
                 </div>

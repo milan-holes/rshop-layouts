@@ -1,0 +1,144 @@
+.form-group {
+    & > label {
+        display: none;
+    }
+    &.inside {
+        & {
+            position: relative;
+        }
+        .btn {
+            @include absoluteCentered;
+            left: auto;
+            right: 5px;
+        }
+    }
+    &.with_label {
+        & > label {
+            display: inline-block;
+        }
+    }
+    &.is_checkbox {
+        .form-control {
+            margin: 12px 0px;
+            float: left;
+            height: 14px;
+            width: auto;
+        }
+        & > label {
+            @include fnt((ff: $f_primary_regular, fs: 14px, lh: 36px));
+            color: #fff;
+            float: left;
+            font-weight: normal;
+            padding-left: 10px;
+            margin-bottom: 0px;
+        }
+    }
+    &.is_radio {
+        & {
+            overflow: hidden;
+            position: relative;
+        }
+        .form-control {
+            margin: 3px 0px;
+            height: 14px;
+            width: auto;
+            position: absolute;
+        }
+        & > label {
+            @include fnt((ff: $f_primary_regular, fs: 14px, lh: 18px));
+            color: #000;
+            font-weight: normal;
+            padding-left: 25px;
+            margin-bottom: 0px;
+        }
+    }
+    textarea {
+        height: 105px;
+        background: $c_bg_gray;
+        padding: 12px;
+    }
+}
+.form-control {
+    & {
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: #211f20;
+    }
+    &.error {
+        border-color: #d43f3a;
+    }
+}
+.bootstrap-select {
+    & {
+        border-radius: 2px;
+        max-width: 100%;
+        height: 38px;
+        border: 1px solid #ededed;
+    }
+    & > .dropdown-toggle {
+        & {
+            @include fnt((ff: $f_primary_regular));
+            height: 100%;
+            padding-left: 12px;
+            background: $c_bg_gray;
+        }
+        .bs-caret {
+            & {
+                display: block;
+                width: 43px;
+                background: #fff;
+                position: absolute;
+                top: 1px;
+                bottom: 1px;
+                right: 1px;
+                border-left: 1px solid #ededed;
+            }
+            .caret {
+                @include absoluteCentered;
+            }
+        }
+    }
+    &.sp {
+        &--transparent {
+            & {
+                border: none;
+            }
+            & > .dropdown-toggle {
+                & {
+                    @include fnt((ff: $f_primary_bold));
+                    background: #fff;
+                }
+                .bs-caret {
+                    & {
+                        display: inline;
+                        width: auto;
+                        background: transparent;
+                        height: auto;
+                        position: static;
+                        top: auto;
+                        right: auto;
+                        border-left: none;
+                    }
+                    .caret {
+                        right: 12px;
+                        left: auto;
+                    }
+                }
+            }
+        }
+        &--white {
+            & > .dropdown-toggle {
+                & {
+                    @include fnt((ff: $f_primary_regular));
+                    background: #fff;
+                    color: #000;
+                }
+                .bs-caret {
+                    & {
+                        width: 33px;
+                    }
+                }
+            }
+        }
+    }
+}

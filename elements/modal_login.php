@@ -3,8 +3,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close ico__hover" data-dismiss="modal" aria-label="Close">
-                    <i class="ico ico--modal--close orig"></i>
-                    <i class="ico ico--modal--close--red hover"></i>
+                    <i class="ico ico-modal--close orig"></i>
+                    <i class="ico ico-modal--close--red hover"></i>
                 </button>
                 <h4 class="modal-title" id="myModalLabel"><?= __('Prihláste sa') ?></h4>
             </div>

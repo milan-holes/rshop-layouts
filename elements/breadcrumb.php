@@ -3,8 +3,8 @@
         <ul class="bread">
             <li class="bread__item bread__item--home">
                 <a href="#" title="Slovakia Trend" class="ico__hover">
-                    <i class="ico ico--bread--home--black orig"></i>
-                    <i class="ico ico--bread--home--yellow hover"></i>
+                    <i class="ico ico-bread--home--black orig"></i>
+                    <i class="ico ico-bread--home--yellow hover"></i>
                     <span>Slovakia Trend</span>
                 </a>
             </li>

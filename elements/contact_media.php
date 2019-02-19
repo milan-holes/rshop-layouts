@@ -55,7 +55,7 @@ function initialize() {
     marker = new google.maps.Marker({
         position: marker_pos,
         map: map,
-        icon: 'webroot/img/logos/ico--pin.png'
+        icon: 'webroot/img/logos/ico-pin.png'
     });
     // on click zoom
     google.maps.event.addListener(marker, 'click', function() {

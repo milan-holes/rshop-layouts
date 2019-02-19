@@ -1,0 +1,123 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?6o7b8q') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?6o7b8q') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?6o7b8q##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ico {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-check {
+  &:before {
+    content: $ico-check; 
+  }
+}
+.ico-arrow-left {
+  &:before {
+    content: $ico-arrow-left; 
+  }
+}
+.ico-arrow-right {
+  &:before {
+    content: $ico-arrow-right; 
+  }
+}
+.ico-angle-left {
+  &:before {
+    content: $ico-angle-left; 
+  }
+}
+.ico-angle-right {
+  &:before {
+    content: $ico-angle-right; 
+  }
+}
+.ico-box {
+  &:before {
+    content: $ico-box; 
+  }
+}
+.ico-cart {
+  &:before {
+    content: $ico-cart; 
+  }
+}
+.ico-close {
+  &:before {
+    content: $ico-close; 
+  }
+}
+.ico-delimiter {
+  &:before {
+    content: $ico-delimiter; 
+  }
+}
+.ico-download-file {
+  &:before {
+    content: $ico-download-file; 
+  }
+}
+.ico-grid-view {
+  &:before {
+    content: $ico-grid-view; 
+  }
+}
+.ico-house {
+  &:before {
+    content: $ico-house; 
+  }
+}
+.ico-idea {
+  &:before {
+    content: $ico-idea; 
+  }
+}
+.ico-list-view {
+  &:before {
+    content: $ico-list-view; 
+  }
+}
+.ico-wishlist {
+  &:before {
+    content: $ico-wishlist; 
+  }
+}
+.ico-lock {
+  &:before {
+    content: $ico-lock; 
+  }
+}
+.ico-menu {
+  &:before {
+    content: $ico-menu; 
+  }
+}
+.ico-tick {
+  &:before {
+    content: $ico-tick; 
+  }
+}
+.ico-user {
+  &:before {
+    content: $ico-user; 
+  }
+}
+

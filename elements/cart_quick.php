@@ -8,8 +8,8 @@
                 <label for="quick_input">Napíšte číslo produktu alebo názov</label>
                 <input type="text" name="quick" class="form-control" id="quick_input" placeholder="">
                 <button type="submit" class="btn ico__hover">
-                    <i class="ico ico--search--white orig"></i>
-                    <i class="ico ico--search--yellow hover"></i>
+                    <i class="ico ico-search--white orig"></i>
+                    <i class="ico ico-search--yellow hover"></i>
                 </button>
             </div>
         </form>

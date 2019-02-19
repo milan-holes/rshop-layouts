@@ -15,7 +15,7 @@
 <div class="product__info__download col-xs-100 col-sm-35 col-md-45">
     <h2 class="product__info__title product__info__title--download">Na stiahnutie</h2>
     <ul class="list list--download">
-        <li><i class="ico ico--download"></i><a href="#" target="_blank"><span>Technická špecifikácia</span></a></li>
-        <li><i class="ico ico--download"></i><a href="#" target="_blank"><span>Návod na použitie</span></a></li>
+        <li><i class="ico ico-download"></i><a href="#" target="_blank"><span>Technická špecifikácia</span></a></li>
+        <li><i class="ico ico-download"></i><a href="#" target="_blank"><span>Návod na použitie</span></a></li>
     </ul>
 </div>

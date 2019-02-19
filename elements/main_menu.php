@@ -1,9 +1,9 @@
 <div class="header__menu col-xs-100 col-sm-29 col-md-22 col-lg-19">
     <a href="#" title="Všetky produkty" class="hidden-xs hidden-sm">
-        <i class="ico left ico--menu"></i><span>Všetky produkty</span><i class="ico right arr--yellow--down"></i>
+        <i class="ico left ico-menu"></i><span>Všetky produkty</span><i class="ico right arr--yellow--down"></i>
     </a>
     <a href="#" title="Všetky produkty" class="header__menu__trigger visible-xs visible-sm">
-        <i class="ico left ico--menu"></i><span class="hidden-cxs">Všetky produkty</span><i class="ico right arr--yellow--down hidden-cxs"></i>
+        <i class="ico left ico-menu"></i><span class="hidden-cxs">Všetky produkty</span><i class="ico right arr--yellow--down hidden-cxs"></i>
     </a>
     <div class="header__nav__wrapper">
         <ul class="header__nav__list hidden-xs hidden-sm">

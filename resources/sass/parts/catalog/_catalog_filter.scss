@@ -1,0 +1,174 @@
+.filter {
+    & {
+        margin-top: 35px;
+        margin-bottom: 25px;
+    }
+    &__form {
+        border-radius: 2px;
+        background: gray;
+        padding: 8px 0px;
+    }
+    &__box {
+        & {
+            float: left;
+            position: relative;
+        }
+        &--sort {
+
+        }
+        &--price {
+            .form-group {
+                float: left;
+                width: 18%;
+                margin-bottom: 0px;
+            }
+            .form-control {
+                @include fnt((fs: 13px));
+                height: 38px;
+                padding: 2px;
+                text-align: center;
+            }
+            .ui-slider {
+                margin: 17px 7% 0px 7%;
+                width: 50%;
+                float: left;
+            }
+        }
+        &--brands {
+
+        }
+        &--availability {
+
+        }
+        &--view {
+            label {
+                & {
+                    border-radius: 2px;
+                    width: 42px;
+                    height: 38px;
+                    float: left;
+                    background: #fff;
+                    margin-right: 11px;
+                    margin-bottom: 0px;
+                    position: relative;
+                    cursor: pointer;
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                &.active {
+                    .orig {
+                        display: none;
+                    }
+                    .hover {
+                        display: inline-block;
+                    }
+                }
+            }
+            .ico {
+                @include absoluteCentered;
+            }
+        }
+    }
+    &__type {
+        @include fnt((ff: $f_primary_bold, fs: 15px, lh: 19px));
+        position: absolute;
+        color: #000;
+        top: -33px;
+        left: 5px;
+    }
+}
+
+/* MEDIA QUERY */
+@media (max-width: $md-max) {
+    .filter {
+        & {
+            margin-top: 0px;
+        }
+        &__box {
+            & {
+                padding-top: 25px;
+            }
+            &--brands,
+            &--availability,
+            &--view {
+                margin-top: 20px;
+            }
+            &--view {
+                .filter__type {
+                    left: auto;
+                    right: 15px;
+                }
+                a {
+                    & {
+                        float: right;
+                        margin-right: 0px;
+                        margin-left: 11px;
+                    }
+                    &:last-child {
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+        &__type {
+            & {
+                top: 0px;
+                left: 15px;
+                color: #fff;
+            }
+            &--avail {
+                position: static;
+                float: left;
+                margin-top: 8px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+@media (max-width: $xs-max) {
+    .filter {
+        &__type {
+            &--avail {
+                position: absolute;
+                float: none;
+                margin-top: 0px;
+                margin-right: 0px;
+            }
+        }
+    }
+}
+@media (max-width: 649px) {
+    .filter {
+        &__box {
+            &--view {
+                & {
+                    width: 178px;
+                }
+                .filter__type {
+                    left: 15px;
+                    right: auto;
+                }
+            }
+            &--availability {
+                width: 65%;
+            }
+        }
+    }
+}
+@media (max-width: $cxs-max) {
+    .filter {
+        &__box {
+            & {
+                width: 100%;
+           }
+            &--price {
+                margin-top: 20px;
+            }
+            &--view {
+                margin-top: 5px;
+                width: 178px;
+            }
+        }
+    }
+}

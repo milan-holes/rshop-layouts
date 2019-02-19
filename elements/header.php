@@ -18,7 +18,7 @@ $lang = array(
                 </div>
                 <div class="header__links hidden-xs hidden-sm col-md-50 col-lg-44">
                     <div class="header__link">
-                        <i class="ico left ico--atsign"></i>
+                        <i class="ico left ico-atsign"></i>
                         <a href="<?= $this->Url->build('kontakt') ?>" title="<?= __('Kontakt') ?>">
                             <span><?= __('Kontakt') ?></span><i class="ico arr--black--right"></i>
                         </a>
@@ -26,8 +26,8 @@ $lang = array(
                 </div>
                 <div class="header__account col-xs-56 col-sm-35 col-md-27 col-lg-21">
                     <div class="header__account__wrapper">
-                        <a href="#login" title="Prihlásenie" data-toggle="modal"><i class="ico left ico--login"></i><span>Prihlásenie</span></a>
-                        <a href="#registration" title="Registrácia" data-toggle="modal"><i class="ico left ico--logout"></i><span>Registrácia</span></a>
+                        <a href="#login" title="Prihlásenie" data-toggle="modal"><i class="ico left ico-login"></i><span>Prihlásenie</span></a>
+                        <a href="#registration" title="Registrácia" data-toggle="modal"><i class="ico left ico-logout"></i><span>Registrácia</span></a>
                     </div>
                 </div>
             </div>

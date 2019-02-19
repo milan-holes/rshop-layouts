@@ -25,8 +25,8 @@
     <div class="product__img">
         <img src="<?= $product['image'] ?>" data-magnify-src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>">
         <a href="0" title="Zväčšiť obrázok" class="ico__hover">
-            <i class="ico ico--enlarge orig"></i>
-            <i class="ico ico--enlarge--yellow hover"></i>
+            <i class="ico ico-enlarge orig"></i>
+            <i class="ico ico-enlarge--yellow hover"></i>
         </a>
     </div>
 </div>
@@ -59,14 +59,14 @@
                 <input name="product_buy" value="1" class="ui-spinner">
             </div>
             <a href="buy" class="products__buy" title="Vložiť do košíka">
-                <i class="ico ico--minicart left"></i>
+                <i class="ico ico-minicart left"></i>
                 <span>
                     <span class="hidden-649 hidden-md">vložiť </span>do košíka
                 </span>
             </a>
         </div>
         <div class="product__availability">
-            <i class="ico ico--transport"></i>K nákupu máte <span>dopravu</span> zdarma
+            <i class="ico ico-transport"></i>K nákupu máte <span>dopravu</span> zdarma
         </div>
     </div>
     <div class="product__table">
@@ -94,8 +94,8 @@
             <div class="product__parameters__name">Doprava:</div>
             <div class="product__parameters__content">
                 <ul class="list list--square">
-                    <li>Štandardná doprava<i class="ico ico--info t-tip" title="Tooltip text"></i></li>
-                    <li>Expresná doprava<i class="ico ico--info t-tip" title="Tooltip text"></i></li>
+                    <li>Štandardná doprava<i class="ico ico-info t-tip" title="Tooltip text"></i></li>
+                    <li>Expresná doprava<i class="ico ico-info t-tip" title="Tooltip text"></i></li>
                 </ul>
             </div>
         </div>

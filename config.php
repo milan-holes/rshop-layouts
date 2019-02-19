@@ -6,7 +6,11 @@
  */
 $pages = [
     'index' => [
-        'template' => 'Pages/index',
+        'template' => 'index',
+        'layout' => 'default'
+    ],
+    'homepage' => [
+        'template' => 'Pages/homepage',
         'layout' => 'default'
     ],
     'listing' => [

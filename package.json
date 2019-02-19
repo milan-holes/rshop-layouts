@@ -2,6 +2,7 @@
   "name": "RSHOP",
   "version": "0.1.0",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
     "underscore": "^1.8.3",
@@ -16,6 +17,19 @@
     "grunt-contrib-less": "~0.6.4",
     "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-watch": "~0.5.1",
-    "grunt-spritesmith": "^6.1.0"
+    "grunt-spritesmith": "^6.1.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-fs-cache": "^0.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-grunt": "^0.5.5",
+    "pump": "^3.0.0"
   }
 }

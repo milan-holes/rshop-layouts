@@ -3,8 +3,8 @@
         <div class="aside__title">Nákupný košík</div>
         <a href="#" title="Zavrieť" class="aside__close">
             Zavrieť
-            <i class="ico ico--aside--close--white right orig"></i>
-            <i class="ico ico--aside--close--red right hover"></i>
+            <i class="ico ico-aside--close--white right orig"></i>
+            <i class="ico ico-aside--close--red right hover"></i>
         </a>
     </div>
     <div class="aside__content">
@@ -25,8 +25,8 @@
                 </div>
             </a>
             <a href="#" class="aside--cart__delete" title="Zavrieť">
-                <i class="ico ico--aside--close--black right orig"></i>
-                <i class="ico ico--aside--close--red right hover"></i>
+                <i class="ico ico-aside--close--black right orig"></i>
+                <i class="ico ico-aside--close--red right hover"></i>
             </a>
         </div>
         <?php
@@ -35,7 +35,7 @@
 
         <div class="aside--cart__totals">
             <div class="aside--cart__transport">
-                <i class="ico ico--transport"></i>
+                <i class="ico ico-transport"></i>
                 K tomuto nákupu máte <strong>dopravu zdarma</strong>
             </div>
             <div class="aside--cart__total">

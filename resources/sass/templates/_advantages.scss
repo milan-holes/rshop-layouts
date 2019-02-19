@@ -1,0 +1,60 @@
+@mixin t-box-advantages {
+    .advantages {
+        overflow: hidden;
+        margin-bottom: 35px;
+    }
+    .advantage {
+        & {
+            box-sizing: border-box;
+            float: left;
+        }
+        &__text {
+            & {
+                @include fnt((ff: $f_primary_regular, fs: 14px, lh: 18px));
+                color: #000;
+                padding-left: 13px;
+            }
+            .ico {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                right: -18px;
+                margin: auto;
+                opacity: .4;
+            }
+        }
+        a {
+            display: block;
+        }
+        table {
+            position: relative;
+            height: 52px;
+        }
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    /* MEDIA QUERY */
+    @media (max-width: $xs-max) {
+        .advantages {
+            padding-left: 25px;
+        }
+        .advantage {
+            margin-top: 30px;
+        }
+    }
+    @media (max-width: $cxs-max) {
+        .advantage {
+            & {
+                width: 100%;
+            }
+            td {
+                &:first-child {
+                    width: 50px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

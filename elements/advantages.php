@@ -4,7 +4,7 @@
             <table>
                 <tr>
                     <td>
-                        <i class="ico ico--advantage--instock"></i>
+                        <i class="ico ico-advantage--instock"></i>
                     </td>
                     <td class="advantage__text">
                         Viac ako <strong>10 000 položiek</strong> <br class="hidden-cxs">dostupných <strong>skladom</strong>
@@ -19,7 +19,7 @@
             <table>
                 <tr>
                     <td>
-                        <i class="ico ico--advantage--quality"></i>
+                        <i class="ico ico-advantage--quality"></i>
                     </td>
                     <td class="advantage__text">
                         <strong>Záruka vysokej <br class="hidden-cxs">kvality</strong> produktov
@@ -34,7 +34,7 @@
             <table>
                 <tr>
                     <td>
-                        <i class="ico ico--advantage--delivery"></i>
+                        <i class="ico ico-advantage--delivery"></i>
                     </td>
                     <td class="advantage__text">
                         <strong>Pravidelný rozvoz</strong> <br class="hidden-cxs">tovaru pre odberatelov
@@ -49,7 +49,7 @@
             <table>
                 <tr>
                     <td>
-                        <i class="ico ico--advantage--experience"></i>
+                        <i class="ico ico-advantage--experience"></i>
                     </td>
                     <td class="advantage__text">
                         <strong>20 rokov skúseností</strong> <br class="hidden-cxs">na európskom trhu

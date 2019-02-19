@@ -46,16 +46,16 @@
         <div class="filter__box filter__box--view col-xs-30 col-sm-25 col-md-19 col-lg-16">
             <div class="filter__type">Zobrazenie:</div>
             <label title="Riadkové zobrazenie" id="row" class="filter__view--row ico__hover">
-                <i class="ico ico--view--row orig"></i>
-                <i class="ico ico--view--row--yellow hover"></i>
+                <i class="ico ico-view--row orig"></i>
+                <i class="ico ico-view--row--yellow hover"></i>
             </label>
             <label title="Kódové zobrazenie" id="code" class="filter__view--code ico__hover">
-                <i class="ico ico--view--code orig"></i>
-                <i class="ico ico--view--code--yellow hover"></i>
+                <i class="ico ico-view--code orig"></i>
+                <i class="ico ico-view--code--yellow hover"></i>
             </label>
             <label title="Blokové zobrazenie" id="block" class="filter__view--block ico__hover active">
-                <i class="ico ico--view--block orig"></i>
-                <i class="ico ico--view--block--yellow hover"></i>
+                <i class="ico ico-view--block orig"></i>
+                <i class="ico ico-view--block--yellow hover"></i>
             </label>
         </div>
         <div class="breaker"></div>

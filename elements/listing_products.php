@@ -61,7 +61,7 @@
                 <input name="value" value="1" class="ui-spinner">
             </div>
             <button type="submit" class="btn products__buy" title="Vložiť do košíka">
-                <i class="ico ico--minicart left"></i>
+                <i class="ico ico-minicart left"></i>
                 <span>
                     <span class="hidden-sm hidden-md">vložiť </span>do košíka
                 </span>

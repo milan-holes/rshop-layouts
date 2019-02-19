@@ -1,0 +1,91 @@
+// layout
+$queries: (
+    cxs: 0px,
+    xs : 600px,
+    sm : 768px,
+    md : 1024px,
+    lg : 1200px
+);
+
+$container-sm: 738px;
+$container-md: 962;
+$container-lg: 1170px;
+
+// paths
+$p_project_fonts: '../fonts/';
+$p_bg: '../img/bg/';
+$icomoon-font-path: '../fonts/icomoon';
+
+// fonts
+$f_icomoon: 'Icomoon';
+$f_awesome: FontAwesome;
+$f_primary_regular: 'Muli Regular';
+$f_primary_semibold: 'Muli Semibold';
+$f_primary_bold: 'Muli Bold';
+
+// colors
+$c_primary: #003982;
+$c_primary_lighter: rgba($c_primary, .72);
+$c_primary_darkest: #00214B;
+$c_primary_darker: rgba($c_primary_darkest, .72);
+
+$c_secondary: #FF9012;
+$c_secondary_lighter: #feb05e;
+
+$c_cart: $c_secondary;
+$c_cart_lighter: $c_secondary_lighter;
+
+$c_font: #1A1A1A;
+$c_font_navigation: #232A34;
+$c_font_thumb: #232A34;
+$c_font_cart: #232A34;
+$c_font_gray: #A4A4A5;
+
+$c_red: #EC1D24;
+$c_red_darker: darken($c_red, 15%);
+$c_green: #139e47;
+$c_green_darker: #096F2E;
+$c_gray: #D7DBE2;
+$c_blue: #2196f3;
+$c_blue_darker: darken($c_blue, 15%);
+$c_blue_darkest: darken($c_blue, 25%);
+
+$c_bg_gray: #F3F4F6;
+$c_border: #D9DCE3;
+
+$warningBg: #f0ad4e;
+$warningBorder: #eea236;
+$warningColor: #fff;
+
+$successBg: #5cb85c;
+$successBorder: #4cae4c;
+$successColor: #fff;
+
+$dangerBg: #d9534f;
+$dangerBorder: #d43f3a;
+$dangerColor: #fff;
+
+$infoBg: #5bc0de;
+$infoBorder: #46b8da;
+$infoColor: #fff;
+
+// other
+
+// from frontend - don't change
+$queries_borders: (
+    cxs: (map-get($queries, cxs), map-get($queries, xs) - 1px),
+    xs : (map-get($queries, xs), map-get($queries, sm) - 1px),
+    sm : (map-get($queries, sm), map-get($queries, md) - 1px),
+    md : (map-get($queries, md), map-get($queries, lg) - 1px),
+    lg : (map-get($queries, lg), null)
+);
+
+$cxs_min: nth(map-get($queries_borders, cxs), 1);
+$cxs_max: nth(map-get($queries_borders, cxs), 2);
+$xs_min : nth(map-get($queries_borders, xs), 1);
+$xs_max : nth(map-get($queries_borders, xs), 2);
+$sm_min : nth(map-get($queries_borders, sm), 1);
+$sm_max : nth(map-get($queries_borders, sm), 2);
+$md_min : nth(map-get($queries_borders, md), 1);
+$md_max : nth(map-get($queries_borders, md), 2);
+$lg_min : nth(map-get($queries_borders, lg), 1);
